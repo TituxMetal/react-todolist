@@ -1,8 +1,10 @@
 {
   "name": "react-todolist",
+  "description": "A simple todo list app using react and materialize",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "materialize-css": "^1.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4"
