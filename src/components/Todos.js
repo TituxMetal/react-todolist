@@ -1,8 +1,16 @@
 import React, { Fragment } from 'react'
 
+import Todo from './Todo'
 import TodoForm from './TodoForm'
 
-export default ({ addTodo }) => {
+export default ({ todos, addTodo }) => {
+  const todoList = todos.length > 0 ?
+    todos.map(todo =>
+      <Todo key={todo.id} todo={todo} />
+    ) :
+    <li className="collection-item grey darken-3 valign-wrapper">
+      <p className='col s8 offset-s2 l6 offset-l3'>No todo!</p>
+    </li>
   return (
     <Fragment>
       <div className="row">
@@ -10,6 +18,7 @@ export default ({ addTodo }) => {
           <li className="collection-header grey darken-3">
             <TodoForm onSubmit={addTodo} />
           </li>
+          {todoList}
         </ul>
       </div>
     </Fragment>
