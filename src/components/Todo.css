@@ -1,3 +1,11 @@
 .collection .collection-item.avatar .secondary-content {
   top: 30px; /* Collection item avatar min-height 84px - icon font-size 24px > (84 - 24) / 2 */
 }
+
+.complete, .secondary-content {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
