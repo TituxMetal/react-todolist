@@ -4,7 +4,7 @@ This is a small project created with React framework and Materialize css, based 
 | Task                                              | Assigned to   | Current Status | Done  |
 |---------------------------------------------------|---------------|----------------|-------|
 | Add a todo                                        | TituxMetal    | Done           | <ul><li> - [x] </li></ul>   |
-| Display a list of todos                           | TituxMetal    | Todo           | <ul><li> - [ ] </li></ul>   |
+| Display a list of todos                           | TituxMetal    | Done           | <ul><li> - [x] </li></ul>   |
 | Cross off a todo, mark the todo complete          | TituxMetal    | Todo           | <ul><li> - [ ] </li></ul>   |
 | Show number of active todos TituxMetal            | TituxMetal    | Todo           | <ul><li> - [ ] </li></ul>   |
 | Filter All/Active/Completed todos                 | TituxMetal    | Todo           | <ul><li> - [ ] </li></ul>   |
