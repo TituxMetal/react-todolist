@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 
 import Todo from './Todo'
 import TodoForm from './TodoForm'
+import TodoActions from './TodoActions';
 
 export default ({ todos, addTodo, toggleComplete }) => {
   const todoList = todos.length > 0 ?
@@ -19,6 +20,9 @@ export default ({ todos, addTodo, toggleComplete }) => {
             <TodoForm onSubmit={addTodo} />
           </li>
           {todoList}
+          <TodoActions
+            todos={todos}
+          />
         </ul>
       </div>
     </Fragment>
