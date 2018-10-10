@@ -12,6 +12,12 @@ class App extends Component {
     }))
   }
 
+  toggleComplete = todoId => {
+    this.setState(state => ({
+      todos: state.todos.map(todo => todo.id === todoId ? { ...todo, complete: !todo.complete } : todo)
+    }))
+  }
+
   render() {
     return (
       <section className="container">
@@ -19,6 +25,7 @@ class App extends Component {
         <Todos
           todos={this.state.todos}
           addTodo={this.addTodo}
+          toggleComplete={this.toggleComplete}
         />
       </section>
     )
