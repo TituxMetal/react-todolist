@@ -3,7 +3,8 @@ import Todos from './components/Todos';
 
 class App extends Component {
   state = {
-    todos: []
+    todos: [],
+    todosToShow: 'all'
   }
 
   addTodo = todo => {
@@ -18,14 +19,32 @@ class App extends Component {
     }))
   }
 
+  updateTodoToShow = string => {
+    this.setState({
+      todosToShow: string
+    })
+  }
+
   render() {
+    let todos = []
+    switch (this.state.todosToShow) {
+      case 'active':
+        todos = this.state.todos.filter(todo => !todo.complete)
+        break
+      case 'complete':
+        todos = this.state.todos.filter(todo => todo.complete)
+        break
+      default:
+        todos = this.state.todos
+    }
     return (
       <section className="container">
         <h1 className='center'>Todo's</h1>
         <Todos
-          todos={this.state.todos}
+          todos={todos}
           addTodo={this.addTodo}
           toggleComplete={this.toggleComplete}
+          filterTodos={this.updateTodoToShow}
         />
       </section>
     )
