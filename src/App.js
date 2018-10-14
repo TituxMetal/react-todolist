@@ -22,6 +22,12 @@ class App extends Component {
     }))
   }
 
+  handleDelete = todoId => {
+    this.setState(state => ({
+      todos: state.todos.filter(todo => todo.id !== todoId)
+    }))
+  }
+
   toggleComplete = todoId => {
     this.setState(state => ({
       todos: state.todos.map(todo => todo.id === todoId ? { ...todo, complete: !todo.complete } : todo)
@@ -52,6 +58,7 @@ class App extends Component {
         <Todos
           todos={todos}
           addTodo={this.addTodo}
+          handleDelete={this.handleDelete}
           toggleComplete={this.toggleComplete}
           filterTodos={this.updateTodoToShow}
         />
