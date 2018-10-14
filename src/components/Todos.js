@@ -4,7 +4,7 @@ import Todo from './Todo'
 import TodoForm from './TodoForm'
 import TodoActions from './TodoActions';
 
-export default ({ todos, addTodo, toggleComplete }) => {
+export default ({ todos, addTodo, toggleComplete, filterTodos }) => {
   const todoList = todos.length > 0 ?
     todos.map(todo =>
       <Todo key={todo.id} todo={todo} toggleComplete={toggleComplete} />
@@ -22,6 +22,7 @@ export default ({ todos, addTodo, toggleComplete }) => {
           {todoList}
           <TodoActions
             todos={todos}
+            filterTodos={filterTodos}
           />
         </ul>
       </div>
