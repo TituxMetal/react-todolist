@@ -1,10 +1,19 @@
 import React, { Component } from 'react'
-import Todos from './components/Todos';
+import Todos from './components/Todos'
+import { Tooltip } from 'materialize-css/dist/js/materialize.min.js'
 
 class App extends Component {
   state = {
     todos: [],
     todosToShow: 'all'
+  }
+
+  componentDidMount() {
+    Tooltip.init(document.querySelectorAll('.tooltip'))
+  }
+
+  componentDidUpdate() {
+    Tooltip.init(document.querySelectorAll('.tooltip'))
   }
 
   addTodo = todo => {
