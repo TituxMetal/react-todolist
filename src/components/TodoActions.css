@@ -1,5 +1,16 @@
-
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
 .actions .count {
   width: 25%;
+}
+
+.actions .secondary-content {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  max-width: 220px;
 }
