@@ -4,10 +4,10 @@ import Todo from './Todo'
 import TodoForm from './TodoForm'
 import TodoActions from './TodoActions';
 
-export default ({ todos, addTodo, toggleComplete, filterTodos }) => {
+export default ({ todos, addTodo, toggleComplete, filterTodos, handleDelete }) => {
   const todoList = todos.length > 0 ?
     todos.map(todo =>
-      <Todo key={todo.id} todo={todo} toggleComplete={toggleComplete} />
+      <Todo key={todo.id} todo={todo} toggleComplete={toggleComplete} onDelete={handleDelete} />
     ) :
     <li className="collection-item grey darken-3 valign-wrapper">
       <p className='col s8 offset-s2 l6 offset-l3'>No todo!</p>
