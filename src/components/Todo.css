@@ -2,7 +2,14 @@
   top: 30px; /* Collection item avatar min-height 84px - icon font-size 24px > (84 - 24) / 2 */
 }
 
-.complete, .secondary-content {
+.complete p {
+  padding: 10px 0;
+  width: 90%;
+}
+
+.complete p,
+.complete i,
+.secondary-content {
   cursor: pointer;
 }
 
