@@ -2,8 +2,13 @@ import React from 'react'
 
 import './TodoActions.css'
 
-export default ({ todos, filterTodos }) => {
+export default ({ todos, filterTodos, deleteAllCompleted }) => {
   const todosCount = todos.filter(todo => !todo.complete).length
+  const clearCompletedButton = todos.some(todo => todo.complete) ?
+    <button onClick={deleteAllCompleted} className="btn-floating btn-small tooltip red darken-3" data-tooltip='Delete all completed todos'>
+      <i className="material-icons">clear_all</i>
+    </button> :
+    null
   return (
     <li className="collection-item grey darken-3 valign-wrapper actions">
       <p className='count'>To do: {todosCount}</p>
@@ -17,6 +22,7 @@ export default ({ todos, filterTodos }) => {
         <button onClick={() => filterTodos('complete')} className="btn-floating btn-small tooltip green" data-tooltip='Show completed todos'>
           <i className="material-icons">check</i>
         </button>
+        {clearCompletedButton}
       </div>
     </li>
   )
