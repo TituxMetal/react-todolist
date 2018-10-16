@@ -4,7 +4,16 @@ import Todo from './Todo'
 import TodoForm from './TodoForm'
 import TodoActions from './TodoActions';
 
-export default ({ todos, addTodo, toggleComplete, filterTodos, handleDelete, handleDeleteAllCompleted }) => {
+export default ({
+  todos,
+  addTodo,
+  toggleComplete,
+  toggleAllComplete,
+  filterTodos,
+  handleDelete,
+  handleDeleteAllCompleted,
+  handleCompleteAllTodos
+}) => {
   const todoList = todos.length > 0 ?
     todos.map(todo =>
       <Todo key={todo.id} todo={todo} toggleComplete={toggleComplete} onDelete={handleDelete} />
@@ -23,7 +32,9 @@ export default ({ todos, addTodo, toggleComplete, filterTodos, handleDelete, han
           <TodoActions
             todos={todos}
             filterTodos={filterTodos}
+            toggleAllComplete={toggleAllComplete}
             deleteAllCompleted={handleDeleteAllCompleted}
+            handleCompleteAllTodos={handleCompleteAllTodos}
           />
         </ul>
       </div>
