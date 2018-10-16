@@ -10,7 +10,7 @@ This is a small project created with React framework and Materialize css, based 
 | Filter All/Active/Completed todos                 | TituxMetal    | Todo           | <ul><li> - [x] </li></ul>   |
 | Delete a single todo                              | TituxMetal    | Todo           | <ul><li> - [x] </li></ul>   |
 | Delete all completed todos</br> only show if atleast one todo is complete  | TituxMetal    | Todo           | <ul><li> - [x] </li></ul>   |
-| Button to toggle all todos complete/uncomplete</br> only show if atleast one todo is in the list   | TituxMetal    | Todo           | <ul><li> - [ ] </li></ul>   |
+| Button to toggle all todos complete/uncomplete</br> only show if atleast one todo is in the list   | TituxMetal    | Todo           | <ul><li> - [x] </li></ul>   |
 
 To see it go to: https://tituxmetal.github.io/react-todolist
 
